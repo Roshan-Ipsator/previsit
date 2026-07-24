@@ -77,8 +77,23 @@ public class ReminderServiceImpl implements ReminderService {
   }
 
   private String buildEmailBody(EventReminder reminder) {
-    return ("Hello %s, This is a reminder for your upcoming event. Event Name: %s Event Date & Time: %s Regards, PreVisit").formatted(
-        reminder.getUser().getName(), reminder.getEventName(),
+
+    return """
+            Hello %s,
+
+            This is a reminder for your upcoming event.
+
+            Event Name:
+            %s
+
+            Event Date & Time:
+            %s
+
+            Regards,
+            PreVisit
+            """.formatted(
+        reminder.getUser().getName(),
+        reminder.getEventName(),
         reminder.getEventDateTime().format(FORMATTER));
   }
 }

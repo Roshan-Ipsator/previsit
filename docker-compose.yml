@@ -6,6 +6,7 @@ services:
     container_name: previsit-postgres
     restart: unless-stopped
     environment:
+      TZ: Asia/Kolkata
       GROQ_API_KEY:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: root
@@ -24,6 +25,7 @@ services:
     ports:
       - "8080:8080"
     environment:
+      TZ: Asia/Kolkata
       GROQ_API_KEY:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/previsit
       SPRING_DATASOURCE_USERNAME: postgres
