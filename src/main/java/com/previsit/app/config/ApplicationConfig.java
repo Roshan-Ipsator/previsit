@@ -21,14 +21,14 @@ public class ApplicationConfig {
   @Value("${spring.mail.password}")
   private String emailPass;
 
-  @Bean
-  public JavaMailSender javaMailSender() {
-    JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
-    mailSender.setHost(emailHost);
-    mailSender.setPort(emailPort);
-    mailSender.setUsername(emailUser);
-    mailSender.setPassword(emailPass);
-    return mailSender;
-  }
+//  @Bean
+//  public JavaMailSender javaMailSender() {
+//    JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
+//    mailSender.setHost(emailHost);
+//    mailSender.setPort(emailPort);
+//    mailSender.setUsername(emailUser);
+//    mailSender.setPassword(emailPass);
+//    return mailSender;
+//  }
 
 }
